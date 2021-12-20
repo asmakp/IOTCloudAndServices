@@ -46,8 +46,7 @@ namespace IOTproject
 
 
             //connectionstring for function app - access keys
-            //   connectionString = "DefaultEndpointsProtocol=https;AccountName=storageaccountiot2087d7;AccountKey=QrXOIyoqfSm9uRaPdSk8l739VB7zE1V0jdH9n0NC2+JTlRW0bYJ7nOztS1lPUbSyI4MGWGMAjwKMRjj/4a24QQ==;EndpointSuffix=core.windows.net";
-            connectionString = "DefaultEndpointsProtocol=https;AccountName=storageaccountiot2087d7;AccountKey=QrXOIyoqfSm9uRaPdSk8l739VB7zE1V0jdH9n0NC2+JTlRW0bYJ7nOztS1lPUbSyI4MGWGMAjwKMRjj/4a24QQ==;BlobEndpoint=https://storageaccountiot2087d7.blob.core.windows.net/;TableEndpoint=https://storageaccountiot2087d7.table.core.windows.net/;QueueEndpoint=https://storageaccountiot2087d7.queue.core.windows.net/;FileEndpoint=https://storageaccountiot2087d7.file.core.windows.net/";
+            connectionString = "DefaultEndpointsProtocol=;BlobEndpoint=QueueEndpoint=FileEndpoint=";
             storageAccount = CloudStorageAccount.Parse(connectionString);
             client = storageAccount.CreateCloudBlobClient();
             container = client.GetContainerReference("blobmessages");
