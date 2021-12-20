@@ -23,8 +23,8 @@ namespace IOTproject
             string data = new StreamReader(req.Body).ReadToEnd();
 
 
-            string accountSid = "AC357a3abd1d86e3e406b7de8e8b25f68b";
-            string authToken = "59e68f885134f740507611f34a5de9f9";
+            string accountSid = "";
+            string authToken = "";
 
            /* DateTime today = DateTime.Now;   //present date and time
             double hour = 1;                 // to increment the hour
@@ -42,7 +42,7 @@ namespace IOTproject
 
 
             var client = new TwilioRestClient(accountSid, authToken);
-            client.SendMessage("+19894871408", "+46727602028", data + DateTime.Now);
+            client.SendMessage("twilioNo", "MyNumber", data + DateTime.Now);
            
 
 
