@@ -22,14 +22,29 @@ namespace IOTproject
             log.LogInformation("Twilio processed a request.");
             string data = new StreamReader(req.Body).ReadToEnd();
 
-           
-            string accountSid = "AC357a3abd1d86e3e406b7de8e8b25f68b";
-            string authToken = "d63dfe50b8ea5c0ca3cbd9bf46b83b2d";
 
-            
+            string accountSid = "AC357a3abd1d86e3e406b7de8e8b25f68b";
+            string authToken = "59e68f885134f740507611f34a5de9f9";
+
+           /* DateTime today = DateTime.Now;   //present date and time
+            double hour = 1;                 // to increment the hour
+            int result;
+            variable to comare time 
+
+            DateTime expectedanswer;  //adding one hour to todays date and time
+            do
+            {
+                client.SendMessage("+19894871408", "+46727602028", data + DateTime.Now);
+                expectedanswer = today.AddHours(hour);
+                result = DateTime.Compare(today, expectedanswer); // comparing the time after adding one hour to the current time
+            } while (result == 0);*/
+
+
+
             var client = new TwilioRestClient(accountSid, authToken);
-            client.SendMessage("***********", "************", data + DateTime.Now);
+            client.SendMessage("+19894871408", "+46727602028", data + DateTime.Now);
            
+
 
         }
     }
