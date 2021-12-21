@@ -84,8 +84,8 @@ By providing the rain update we not only save the consumption of water but also 
  ##  	Implementation
     •	Architecture design
   
-   
-    ![ArchitectureDesign](https://github.com/asmakp/IOTCloudAndServices/blob/2bae0055813b4b59184b6ff74d9acd32e4e82185/ArchitectureDesign.jpg)
+  <img src="main/ArchitectureDesign.jpg"> 
+    ![ArchitectureDesign](ArchitectureDesign.jpg)
      
 
 
