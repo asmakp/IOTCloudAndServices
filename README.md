@@ -111,7 +111,12 @@ which are responsible to send the received data(data from the main azure functio
    ![ArchitectureDesign2](AzureFunctionDesign2.jpg)
 
 
- 
+ The Azure function, which is responsible for sending SMS to the client , send the message only when the moisture content is lower than the
+ desired measurement, along with that it sends additional information about possibilities of rain and drizzle, so the client might not have 
+ to water outdoor plants in case of rain or drizzle.
+ Further the data from the cosmos DB is Visualised by using Power BI. The report generated can be made published to the web and the url can
+ be shared with the client so he can monitor his data.
+
 
 
 
