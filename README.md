@@ -84,8 +84,8 @@ By providing the rain update we not only save the consumption of water but also 
  ##  	Implementation
     •	Architecture design
   
-  <img src="main/ArchitectureDesign.jpg"> 
-    ![ArchitectureDesign](ArchitectureDesign.jpg)
+    <img src="ArchitectureDesign.jpg"> 
+    
      
 
 
