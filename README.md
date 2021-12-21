@@ -84,6 +84,8 @@ By providing the rain update we not only save the consumption of water but also 
  ##  	Implementation
     •	Architecture design
   <img src="ArchitectureDesign.jpg"> 
+  
+  
       
     
     
@@ -101,7 +103,8 @@ The new Json payload is further posted to different Azure functions using their 
 There are Three Azure functions which are triggered on HTTP trigger ,
 which are responsible to send the received data(data from the main azure function) to corresponding Cosmos DB , Blob storage and SMS to mobile(using Twilio).
 
- <img src="ArchitectureDesign2.jpg">
+<img src="ArchitectureDesign2.jpg"> 
+![ArchitectureDesign2](/main/ArchitectureDesign2.jpg)
 
 
   
