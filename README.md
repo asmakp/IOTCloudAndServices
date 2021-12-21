@@ -69,8 +69,8 @@ By providing the rain update we not only save the consumption of water but also 
   
 ## 	Twilio:
     Twilio is an American cloud communication platform as a service (CPaas) company based in California.  
-    Twilio allows software developers to programmatically make and receive phone calls, send and receive text messages,
-    and perform other communication functions using its web services API.
+    Twilio allows software developers to programmatically make and receive phone calls,
+    send and receive text messages, and perform other communication functions using its web services API.
     In this project our client receives sms when the moisture content is low.
     
     
