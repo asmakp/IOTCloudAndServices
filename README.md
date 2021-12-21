@@ -68,11 +68,12 @@ By providing the rain update we not only save the consumption of water but also 
   In this project all the data sent by the dives is stored in Blob storage.
   
 #### 	Twilio:
-
+```
     Twilio is an American cloud communication platform as a service (CPaas) company based in California.  
     Twilio allows software developers to programmatically make and receive phone calls, send and receive text messages,
     and perform other communication functions using its web services API.
     In this project our client receives sms when the moisture content is low.
+```    
     
 #### 	External API:
      SMHI Open Data API:
@@ -93,17 +94,21 @@ By providing the rain update we not only save the consumption of water but also 
 
 The Capacitive Soil Moisture Sensor v2.0 measures the moisture content of the soil and gives an analog output,
 which is converted corresponding to digital value  by the Esp32 microcontroller (MCU) connected to it. 
+
 The measurement along with the current date and time  values taken  from the NTP sever is serialised in Json format with the help of program written on Arduino IDE. 
 The MCU Esp32 with WIFI connection capabilities sends the data over azure cloud to IOT hub. 
+
 The data from the IOT hub is read, processed by the azure function.  The azure function is triggered when the data arrives at IOT Hub.
 The function gets the weather data from SMHI - The open API, in Json format, which is deserialized and necessary data is obtained,
 in this case the temperature , humidity and the precipitation data is extracted. 
+
 The moisture data in the json format is deserialized . The  weather data and the moisture data are  repackaged in to a new  json payload.
 The new Json payload is further posted to different Azure functions using their URLs.
+
 There are Three Azure functions which are triggered on HTTP trigger ,
 which are responsible to send the received data(data from the main azure function) to corresponding Cosmos DB , Blob storage and SMS to mobile(using Twilio).
 
-<img src="ArchitectureDesign2.jpg"> 
+ <img src="ArchitectureDesign2.jpg"> 
 ![ArchitectureDesign2](/main/ArchitectureDesign2.jpg)
 
 
